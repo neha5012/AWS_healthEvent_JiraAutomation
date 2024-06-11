@@ -37,13 +37,42 @@ Before you begin, ensure you have the following configured:
    serverless deploy
 
 4. **Test the Lambda Function**
-   To test the lambda function, there are 2 ways:
-   a. Create a mock event payload:
-      mock event:
-      
-   b. Using test event of Lambda : click on test and and see execution results and find the ticket ID 
 
- 
+   To test the Lambda function, there are two ways:
+
+   a. **Create a Mock Event Payload**:
+
+      Use the following mock event payload:
+
+      ```json
+      [
+        {
+          "DetailType": "AWS Health Abuse Event",
+          "Source": "awsmock.health",
+          "Time": "2024-05-08T10:15:30Z",
+          "Resources": ["arn:aws:ec2:us-east-1:612572392212:instance/i-07529cdd47b3b821b"],
+          "Detail": "{ \"eventArn\": \"arn:aws:health:global::event/AWS_ABUSE_DOS_REPORT_92387492375_4498_2018_08_01_02_33_00\", \"eventTypeCategory\": \"issue\" }"
+        }
+      ]
+      ```
+
+      **NOTE:** The real-time payload given by the AWS Health Dashboard and the mock payload are different. For testing purposes, changes are required in accessing variables in the Lambda code in the `health.py` file.
+
+      For the mock event, modify the `lambda_handler` function as follows:
+
+      ```python
+      def lambda_handler(event, context):
+          event_arn = event['Detail']['eventArn']
+          event_type = event['Detail']['eventTypeCategory']
+      ```
+
+   b. **Using Test Event of Lambda**:
+
+      Click on "Test" in the Lambda console and check the execution results to find the ticket ID. When you deploy the code using serverless, a test event will be configured in your Lambda function. Click on "Test" and see the execution results to find your ticket ID and verify it from your JIRA account.
+
+      **NOTE:** In the case of using the test event (point b), no changes are needed in the code.
+
+    
 
  
  
