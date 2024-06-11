@@ -1,3 +1,6 @@
 
-.serverless
-bin
+# Ignore .serverless directory
+.serverless/
+
+# Ignore bin directory
+bin/
