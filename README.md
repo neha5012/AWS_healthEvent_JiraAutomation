@@ -65,6 +65,7 @@ Before you begin, ensure you have the following configured:
           event_arn = event['Detail']['eventArn']
           event_type = event['Detail']['eventTypeCategory']
       ```
+     Modify the serverless.yaml file by adding the below EventBridge Rule:
      ```python
       - eventBridge:
           eventBus: default
