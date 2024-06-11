@@ -22,10 +22,12 @@ Before you begin, ensure you have the following configured:
    To store your security credentials like JIRA_URL, API_TOKEN, USERNAME, PROJECT_KEY you can define a file named as variables.py file in the project root repository.
 
  **NOTE:** Format of above variables is as following:
+ ```python
  JIRA_URL = "<https://<your-domain>.atlassian.net/rest/api/3/issue>"  
  USER_NAME = "<USER NAME OF JIRA ACCOUNT>"
  API_TOKEN = "<API TOKEN OF JIRA>"
  PROJECT_KEY = "<UNIQUE JIRA PROJECT KEY>"
+```
 
 3. **Deploy the Serverless Application**
 
