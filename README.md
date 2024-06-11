@@ -96,12 +96,12 @@ Project key: Go to Project settings and you can see the Key
   ```
 
    b. **Using Test Event of Lambda**:
-
-      Click on "Test" in the Lambda console and check the execution results to find the ticket ID. When you deploy the code using serverless, a test event will be configured in your Lambda function. Click on "Test" and see the execution results to find your ticket ID and verify it from your JIRA account.
-
-      **NOTE:** In the case of using the test event (point b), no changes are needed in the code.
+     Click on "Test" in the Lambda console and check the execution results to find the ticket ID. When you deploy the code using serverless, a test event will be configured in your Lambda function. Click on "Test" and see the execution results to find your ticket ID and verify it from your JIRA account.
+     **NOTE:** In the case of using the test event (point b), no changes are needed in the code.
       When testing the lambda function for mock event, we have to define the another Eventbridge rule in the serverless.yaml file.
 
+
+      
 
 
 
