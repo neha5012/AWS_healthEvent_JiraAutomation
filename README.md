@@ -65,6 +65,13 @@ Before you begin, ensure you have the following configured:
           event_arn = event['Detail']['eventArn']
           event_type = event['Detail']['eventTypeCategory']
       ```
+     ```python
+      - eventBridge:
+          eventBus: default
+          pattern:
+            source:
+              - "awsmock.health"
+     ```
 
    b. **Using Test Event of Lambda**:
 
