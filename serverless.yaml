@@ -1,4 +1,4 @@
-service: my-service
+service: Health-Event-Jira-Automation
  
 provider:
   name: aws
@@ -20,17 +20,10 @@ resources:
     MyEventRule:
       Type: AWS::Events::Rule
       Properties:
-        Name: my-event-rule
-        EventBusName: default
-        EventPattern:
-          source:
-            - "awsmock.health"
- 
-    MySecondEventRule:
-      Type: AWS::Events::Rule
-      Properties:
-        Name: my-second-event-rule
+        Name: AWS-Health-EventRule
         EventBusName: default
         EventPattern:
           source:
             - "aws.health"
+ 
+    
