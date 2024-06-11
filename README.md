@@ -18,14 +18,7 @@ Before you begin, ensure you have the following configured:
 
    Clone the repository containing the code.
 
-2. **Deploy the Serverless Application**
-
-   Run the following command to deploy the application using CloudFormation. This will deploy an AWS Lambda function with a Python runtime and create two EventBridge rules:
-
-   ```sh
-   serverless deploy
-
-3. **Define Variables**
+2. **Define Variables**
    To store your security credentials like JIRA_URL, API_TOKEN, USERNAME, PROJECT_KEY you can define a file named as variables.py file in the project root repository.
 
  **NOTE:** Format of above variables is as following:
@@ -33,6 +26,22 @@ Before you begin, ensure you have the following configured:
  USER_NAME = "<USER NAME OF JIRA ACCOUNT>"
  API_TOKEN = "<API TOKEN OF JIRA>"
  PROJECT_KEY = "<UNIQUE JIRA PROJECT KEY>"
+
+3. **Deploy the Serverless Application**
+
+   Run the following command to deploy the application using CloudFormation. This will deploy an AWS Lambda function with a Python runtime and create two EventBridge rules:
+
+   ```sh
+   serverless deploy
+
+4. **Test the Lambda Function**
+   To test the lambda function, there are 2 ways:
+   a. Create a mock event payload:
+      mock event:
+      
+   b. Using test event of Lambda : click on test and and see execution results and find the ticket ID 
+
+ 
 
  
  
