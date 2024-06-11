@@ -71,7 +71,7 @@ Before you begin, ensure you have the following configured:
       Click on "Test" in the Lambda console and check the execution results to find the ticket ID. When you deploy the code using serverless, a test event will be configured in your Lambda function. Click on "Test" and see the execution results to find your ticket ID and verify it from your JIRA account.
 
       **NOTE:** In the case of using the test event (point b), no changes are needed in the code.
-      When testing the lambda function, we have to define the another Eventbridge in the serverless.yaml file.
+      When testing the lambda function for mock event, we have to define the another Eventbridge rule in the serverless.yaml file.
     
 
  
